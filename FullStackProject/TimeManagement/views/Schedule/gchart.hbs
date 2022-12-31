@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gun Chart</title>
+    <script src="https://cdn.dhtmlx.com/gantt/edge/dhtmlxgantt.js"></script>
+    <link href="https://cdn.dhtmlx.com/gantt/edge/dhtmlxgantt.css" rel="stylesheet">
+
+    <style type="text/css">
+        html,
+        body {
+            height: 200px;
+            padding: 0px;
+            margin: 0px;
+            overflow: hidden;
+        }
+
+    .ft{
+      position:absolute;
+      left:-200px;
+      bottom:-225px;
+
+    }
+
+   .fsize{
+     font-size:18px;
+     font-weight:bold;
+    }
+   .fsize2{
+      font-weight:bold;
+    }
+
+    .fcolor{
+    font-weight: bold;
+    color:#05be58;
+    font-size:16px ;
+    
+    }
+
+  .fcolor2{
+    font-weight:bold;
+    color:#3541f1;
+    font-size:15px;
+    }
+
+    </style>
+
+   
+</head>
+<body>
+    <div id="gantt_here" style='width:930px; height:262px;'></div>
+      <script type="text/javascript">
+        gantt.init("gantt_here");
+        gant.load(data.json);
+    </script>
+
+<br/>
+    <!-- Footer -->
+
+  <footer class="text-center text-lg-start bg-light text-muted ft">
+   <section class="">
+    <div class="container text-center text-md-start mt-5">
+      <div class="row mt-3">
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <h6 class="text-uppercase fw-bold mb-4">
+            <p class="fcolor">Time Mangement</h6>
+          </h6>
+          <p class="fcolor2">
+            This system manage your time schedule.Then system help to arange your daily works
+          </p>
+        </div>
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <h6 class="text-uppercase fw-bold mb-4 fcolor">
+            Services
+          </h6>
+          <p>
+            <a href="/schedule/list" class="text-reset">Schedule</a>
+          </p>
+          <p>
+            <a href="/schedule" class="text-reset">Animation Page</a>
+          </p>
+         </div>
+        
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <h6 class="text-uppercase fw-bold mb-4 fcolor">
+            About
+          </h6>
+          <p>
+            <a href="/schedule/gchart" class="text-reset">Gunchart</a>
+          </p>
+          <p>
+            <a href="/schedule/voice" class="text-reset">Voice Search</a>
+          </p>
+          <p>
+            <a href="/schedule/addOrEdit" class="text-reset">Time Mange</a>
+          </p>
+          <p>
+            <a href="https://github.com/Randika006/Full-Stack-Development/tree/development" class="text-reset">Version Control</a>
+          </p>
+        </div>
+       
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <h6 class="text-uppercase fw-bold mb-4 fcolor">Contact</h6>
+                    <p class="fcolor2">Gmail:managementtime36@gmail.com</p>
+                    <p class="fcolor2">Tel:+94-71 806 22 37</p>
+     </div>
+      </div>
+    </div>
+  </section>
+<br/>
+  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+   <p>© Created By:Randika Madumal</p>
+  </div>
+  </footer>
+ <!-- Footer -->
+  
+
+</body>
+</html>

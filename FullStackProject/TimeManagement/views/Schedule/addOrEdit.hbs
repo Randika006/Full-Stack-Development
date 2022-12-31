@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Manage Schedule</title>
+
+<style> 
+.formAr{
+ width:710px;
+ height:780px;
+ background-image:url("/images/creative.jpg");
+ background-size:cover;
+ /*background-color : rgb(38, 107, 172);*/
+ border:orange; border-width:5px; border-style:solid;
+
+ position:absolute;
+ top:20px;
+ 
+}
+.ft{
+    position:absolute;
+    left:-200px;
+    bottom:-1100px;
+}
+
+.fsize{
+    font-size:18px;
+    font-weight:bold;
+    color: rgb(1, 19, 1);
+    font-family:Georgia, serif;
+}
+.fsize2{
+    font-weight:bold;
+    color:rgb(175, 0, 0);
+    font-family: system-ui;
+    font-size:35px;
+}
+.fcolor{
+    font-weight: bold;
+    color:#5fe421;
+    font-size:16px ;
+    
+}
+
+.fcolor2{
+    font-weight:bold;
+    color:#3541f1;
+    font-size:15px;
+}
+
+ </style>   
+</head>
+
+
+<body>    
+
+<!--<div class="alert-danger">
+    {{error}}
+</div>-->
+<!--<h3><center>{{viewTitle}}</center></h3>-->
+   <br/>
+
+<div class="formAr">   
+
+  <div class="alert-danger">
+    {{error}}
+  </div>
+
+<br/>
+
+<h1 class="fsize2"><center>Add Activity Details</center></h1>
+<br/><br/>
+
+<form action="/schedule" method="POST" autocomplete="off">
+   <input type="hidden" name="_id" value="{{schedule._id}}">
+        <div class="form-group">
+            <label class="fsize">Activity ID</label>
+            <input type="text" class="form-control" name="ActivityID" value="{{schedule.ActivityID}}" placeholder="Activity ID"  style="font-size:12pt;height:45px;width:700px;">
+            <div class="text-danger">
+                {{schedule.ActivityIDError}}
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="fsize">Start Date</label>
+            <input type="text" class="form-control" name="StartDate" value="{{schedule.StartDate}}" placeholder="Start Date"  style="font-size:12pt;height:45px;width:700px;">
+            <div class="text-danger">
+                {{schedule.StartDateError}}
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group md-6">
+                <label class="fsize">End Date</label>
+                <input type="text" name="EndDate" value="{{schedule.EndDate}}" placeholder="End Date" class="form-control"  style="font-size:12pt;height:45px;width:700px;">
+                
+             </div>
+            <div class="form-group md-6">
+                <label class="fsize">Activity Title</label>
+                <input type="text" name="title" value="{{schedule.title}}" placeholder="Activity Title"  class="form-control"  style="font-size:12pt;height:45px;width:700px;">
+            </div>
+        </div>
+
+
+        <div class="form-row">
+            <div class="form-group md-6">
+                <label class="fsize">Description</label>
+                <input type="text" name="des" value="{{schedule.des}}" placeholder="Description" class="form-control" size="100" style="font-size:12pt;height:45px;width:700px;">
+                
+             </div>
+            <div class="form-group md-6">
+                <label class="fsize">Activity Type</label>
+                <input type="text" name="Atype" value="{{schedule.Atype}}" placeholder="Activity Type"  class="form-control"  style="font-size:12pt;height:45px;width:700px;">
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <button type="submit" class="btn btn-info"><i class="fa fa-database"></i>Submit</button>
+            <a href="/schedule/list" class="btn btn-danger">
+                <i class="fa fa-list-alt"></i>View All
+            </a>
+        </div>
+    </form>
+      
+</div>
+    
+  <!-- Footer -->
+
+<footer class="text-center text-lg-start bg-light text-muted ft">
+  <section class="">
+    <div class="container text-center text-md-start mt-5">
+      <div class="row mt-3">
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <h6 class="text-uppercase fw-bold mb-4">
+            <p class="fcolor">Time Mangement</h6>
+          </h6>
+          <p class="fcolor2">
+            This system manage your time schedule.Then system help to arange your daily works
+          </p>
+        </div>
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <h6 class="text-uppercase fw-bold mb-4 fcolor">
+            Services
+          </h6>
+          <p>
+            <a href="/schedule/list" class="text-reset">Schedule</a>
+          </p>
+          <p>
+            <a href="/schedule" class="text-reset">Animation Page</a>
+          </p>
+         </div>
+        
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <h6 class="text-uppercase fw-bold mb-4 fcolor">
+            About
+          </h6>
+          <p>
+            <a href="/schedule/gchart" class="text-reset">Gunchart</a>
+          </p>
+          <p>
+            <a href="/schedule/voice" class="text-reset">Voice Search</a>
+          </p>
+          <p>
+            <a href="/schedule/addOrEdit" class="text-reset">Time Mange</a>
+          </p>
+          <p>
+            <a href="https://github.com/Randika006/Full-Stack-Development/tree/development" class="text-reset">Version Control</a>
+          </p>
+        </div>
+       
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <h6 class="text-uppercase fw-bold mb-4 fcolor">Contact</h6>
+                    <p class="fcolor2">Gmail:managementtime36@gmail.com</p>
+                    <p class="fcolor2">Tel:+94-71 806 22 37</p>
+     </div>
+      </div>
+    </div>
+  </section>
+<br/>
+  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+    © Created By:
+    <a class="text-reset fw-bold" href="#">Randika Madumal</a>
+  </div>
+</footer>
+   <!-- Footer -->
+  
+</div>
+      
+</body>
+
+</html>
